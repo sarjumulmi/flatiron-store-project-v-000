@@ -4,6 +4,7 @@ describe 'Feature Test: Store', :type => :feature do
         visit store_path
         Category.all.each do |category|
           expect(page).to have_link(category.title, href: category_path(category))
+          # expect(page).to have_content(category.title)
         end
       end
     end
