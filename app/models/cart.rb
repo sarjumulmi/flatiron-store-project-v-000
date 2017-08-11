@@ -26,6 +26,8 @@ class Cart < ActiveRecord::Base
       line_item.item.save
       # binding.pry
     end
+    self.status = "submitted"
+    self.save
   end
 
 end
